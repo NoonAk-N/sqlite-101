@@ -5,6 +5,7 @@ import express from 'express';
 import {getGreetings, addGreeting} from './db.js'
 
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 3008;
 
 // get all the greetings
