@@ -20,13 +20,13 @@ res.json({
 app.listen(PORT, () =>console.log(`start on port : ${PORT}`) )
 //create a route to add a greeting  
 
-app.post('/api/greeting',(req, res) => {
-    const greeting = reg.body.greeting;
-    const language = reg.body.language;
+app.post('/api/greetings',(req, res) => {
+    const greeting = req.body.greeting;
+    const language = req.body.language;
 
 //
 res.json({
-    greeting,
+    greetings,
     language
 });
 
